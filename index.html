@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>J. C. O’Neill | The Blood Red Trilogy</title>
+<meta name="description" content="The Blood Red Trilogy by J. C. O’Neill: modern Northern Gothic fantasy from Sheffield. A Blood Red Heart, A Blood Red Mind and A Blood Red Soul.">
+<meta property="og:title" content="A homepage for J. C. O’Neill, made by Sparsh Saini">
+<meta property="og:description" content="A homepage idea for J. C. O’Neill and The Blood Red Trilogy, made by Sparsh Saini. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/jconeill/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230c0909'/><path d='M16 28V16M16 16c-6-2-9-6-7-9 2-3 6-2 7 2 1-4 5-5 7-2 2 3-1 7-7 9z' fill='none' stroke='%23c4161c' stroke-width='2.4' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* From the three covers: the black and blood red of Heart, the violet and gold of Mind, the
+   red of Soul, the gilt frame and its flared capitals (Marcellus SC), set with Cormorant. */
+:root {
+  --black: #0c0909;
+  --ink: #171111;
+  --blood: #c4161c;
+  --soul: #8e1418;
+  --violet: #2a1640;
+  --gold: #d9b56a;
+  --gold-2: #a8863f;
+  --vellum: #efe4cf;
+  --dust: #b8a993;
+  --display: "Marcellus SC", "Friz Quadrata", Georgia, serif;
+  --text: "Cormorant Garamond", Garamond, Georgia, serif;
+  --gutter: clamp(1rem, 5vw, 4rem);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--black); color: var(--vellum); font-family: var(--text); font-weight: 500; font-size: 1.3rem; line-height: 1.55; overflow-x: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+.wrap { max-width: 68rem; margin: 0 auto; padding: 0 var(--gutter); }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; line-height: 1.08; color: var(--gold); }
+p { margin: 0 0 1rem; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* Buttons wear the covers' gilt edge: a gold rule with a fine inner line. */
+.btn { display: inline-block; padding: .62rem 1.3rem .58rem; font-family: var(--display); font-size: 1.05rem; text-decoration: none; color: var(--black); background: var(--gold); border: 1px solid var(--gold); box-shadow: inset 0 0 0 2px var(--gold), inset 0 0 0 3px rgba(12, 9, 9, .55); }
+.btn:hover, .btn:focus-visible { background: var(--vellum); border-color: var(--vellum); box-shadow: inset 0 0 0 2px var(--vellum), inset 0 0 0 3px rgba(12, 9, 9, .55); }
+.btn.line { background: transparent; color: var(--gold); box-shadow: inset 0 0 0 2px var(--black), inset 0 0 0 3px rgba(217, 181, 106, .6); }
+.btn.line:hover, .btn.line:focus-visible { color: var(--vellum); border-color: var(--vellum); }
+.quiet { font-style: italic; text-underline-offset: .22em; text-decoration-thickness: 1px; }
+.quiet:hover, .quiet:focus-visible { color: var(--gold); }
+.buy { display: flex; flex-wrap: wrap; gap: .8rem 1.4rem; align-items: center; }
+
+.made { position: absolute; z-index: 20; top: 0; left: 0; right: 0; margin: 0; padding: .45rem var(--gutter); background: #060404; color: var(--dust); font-size: 1rem; line-height: 1.3; text-align: center; }
+
+/* Nav: a red ribbon bookmark hangs from the top edge; it opens the contents. */
+.ribbon { position: fixed; z-index: 30; right: clamp(.8rem, 4vw, 3rem); top: 0; }
+.ribbon button { display: block; width: 2.6rem; height: 5.4rem; padding: 0 0 1.3rem; border: 0; background: var(--blood); color: var(--vellum); font-family: var(--display); font-size: .8rem; letter-spacing: .04em; writing-mode: vertical-rl; cursor: pointer; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%); box-shadow: none; }
+.ribbon button:hover, .ribbon button:focus-visible { background: var(--soul); }
+.ribbon nav { position: absolute; right: 0; top: 5.8rem; min-width: 13rem; padding: .8rem 1.1rem; background: var(--ink); border: 1px solid var(--gold-2); box-shadow: 0 1rem 2rem rgba(0, 0, 0, .6); }
+.ribbon nav[hidden] { display: none; }
+.ribbon nav a { display: block; padding: .35rem 0; font-family: var(--display); font-size: 1.05rem; text-decoration: none; color: var(--vellum); }
+.ribbon nav a:hover, .ribbon nav a:focus-visible { color: var(--gold); }
+
+/* Hero: A Blood Red Heart, made of its own parts. The heart-tree grows up out of its roots,
+   the gilt and the title come up around it, then the book turns to Mind and to Soul, the
+   same tree in gold, then in black. Transform and opacity only, one scroll handler. */
+.hero { position: relative; height: 100svh; min-height: 40rem; }
+.js .hero { height: 360svh; }
+.still .hero { height: 100svh; }
+.stage { position: sticky; top: 0; height: 100svh; min-height: 40rem; overflow: hidden; background: radial-gradient(ellipse 60% 70% at 30% 55%, #1d1212, var(--black) 70%); display: grid; grid-template-columns: auto minmax(0, 30rem); justify-content: center; align-items: center; gap: clamp(2.5rem, 6vw, 6rem); padding: 4.5rem var(--gutter) 2rem; }
+.book { position: relative; height: min(76svh, 44rem); aspect-ratio: 1200 / 1875; box-shadow: 0 2rem 4rem rgba(0, 0, 0, .7); will-change: transform; }
+.book > img, .book .grow { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.book .plate { will-change: opacity; }
+.book .grow { left: 12.5%; top: 33.067%; width: 75%; height: 60.8%; overflow: hidden; will-change: transform; }
+.book .grow img { width: 100%; height: 100%; will-change: transform; transform-origin: 50% 100%; }
+.book .mind, .book .soul { opacity: 0; will-change: opacity; }
+.words { position: relative; min-height: 18rem; }
+.beat { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); opacity: 0; will-change: transform, opacity; }
+.beat .which { font-family: var(--display); font-size: 1.05rem; color: var(--dust); margin-bottom: .8rem; }
+.beat .line { font-style: italic; font-size: clamp(1.7rem, 3vw, 2.5rem); line-height: 1.22; color: var(--vellum); margin: 0; }
+.beat.b1 { opacity: 1; }
+.copy { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); opacity: 0; will-change: transform, opacity; }
+.copy h1 { font-size: clamp(2.6rem, 4.6vw, 4rem); }
+.copy .tag { font-size: 1.4rem; font-style: italic; margin: 1rem 0 .4rem; }
+.copy .soon { font-family: var(--display); color: var(--blood); font-size: 1.1rem; margin-bottom: 1.5rem; }
+.still .copy { opacity: 1; }
+.still .beat { display: none; }
+.still .book .soul { opacity: 1; }
+html:not(.js) .copy { opacity: 1; }
+html:not(.js) .beat { display: none; }
+
+/* Calm sections */
+.band { padding: clamp(4.5rem, 10vw, 8rem) 0; }
+h2 { font-size: clamp(2.3rem, 4.6vw, 3.7rem); margin-bottom: 1.4rem; text-wrap: balance; }
+.lead-in { font-size: clamp(1.4rem, 2.2vw, 1.65rem); line-height: 1.42; max-width: 40rem; }
+
+.books { background: var(--ink); }
+.vol { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; padding: 3.2rem 0; border-top: 1px solid rgba(217, 181, 106, .3); }
+.vol:first-of-type { margin-top: 2.6rem; }
+.vol img { box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, .6); }
+.vol .no { font-family: var(--display); color: var(--dust); font-size: 1rem; margin-bottom: .3rem; }
+.vol h3 { font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: .9rem; }
+.vol .cry { font-style: italic; font-size: 1.45rem; line-height: 1.3; color: var(--vellum); margin-bottom: 1.2rem; }
+.vol .when { font-family: var(--display); font-size: 1rem; color: var(--blood); margin: 1.2rem 0 1rem; }
+.vol.mind-v { background: linear-gradient(90deg, rgba(42, 22, 64, .55), rgba(42, 22, 64, 0) 70%); }
+.vol.soul-v { background: linear-gradient(90deg, rgba(142, 20, 24, .4), rgba(142, 20, 24, 0) 70%); }
+
+.oxford { background: var(--violet); }
+.oxford .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+.oxford .table { font-family: var(--display); font-size: clamp(4rem, 11vw, 7.5rem); line-height: .9; color: var(--gold); margin: 0; }
+.oxford .table small { display: block; font-size: 1.05rem; color: var(--dust); margin-bottom: .6rem; }
+.oxford dl { margin: 0 0 1.8rem; display: grid; grid-template-columns: max-content minmax(0, 1fr); border-top: 1px solid rgba(217, 181, 106, .35); }
+.oxford dt, .oxford dd { margin: 0; padding: .7rem 0; border-bottom: 1px solid rgba(217, 181, 106, .35); }
+.oxford dt { font-family: var(--display); color: var(--gold); padding-right: 1.6rem; }
+
+.about { background: var(--black); }
+.about .grid { display: grid; grid-template-columns: minmax(0, 18rem) minmax(0, 36rem); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.about figure { margin: 0; }
+.about figcaption { font-style: italic; color: var(--dust); font-size: 1.05rem; margin-top: .6rem; }
+.about .also { margin-top: 1.6rem; padding-top: 1.2rem; border-top: 1px solid rgba(217, 181, 106, .3); font-size: 1.15rem; color: var(--dust); }
+
+.letters { background: var(--vellum); color: var(--black); }
+.letters h2 { color: var(--soul); }
+.letters .grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.letters .post { font-style: italic; font-size: 1.35rem; margin: 1.4rem 0 1.8rem; padding-left: 1.2rem; border-left: 3px solid var(--blood); }
+.letters .btn { color: var(--vellum); background: var(--soul); border-color: var(--soul); box-shadow: inset 0 0 0 2px var(--soul), inset 0 0 0 3px rgba(239, 228, 207, .55); }
+.letters .btn:hover, .letters .btn:focus-visible { background: var(--black); border-color: var(--black); box-shadow: inset 0 0 0 2px var(--black), inset 0 0 0 3px rgba(239, 228, 207, .55); }
+.letters .quiet:hover, .letters .quiet:focus-visible { color: var(--soul); }
+.letters figure { margin: 0; }
+.letters figcaption { font-style: italic; font-size: 1.05rem; margin-top: .6rem; color: #5b4b3a; }
+
+footer { padding: 2.2rem 0 2.6rem; background: #060404; color: var(--dust); font-size: 1.05rem; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: .8rem 2rem; justify-content: space-between; }
+footer p { margin: 0; }
+
+@media (max-width: 760px) {
+  body { font-size: 1.2rem; }
+  .made { font-size: .92rem; padding-right: 3.6rem; text-align: left; }
+  .ribbon button { height: 4.6rem; width: 2.3rem; }
+  .ribbon nav { top: 5rem; }
+  .stage { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; justify-items: center; align-items: start; gap: 1.2rem; padding: 4rem 1.2rem 1.2rem; }
+  .book { height: min(56svh, 31rem); }
+  .words { width: 100%; min-height: 0; height: 100%; text-align: center; }
+  .beat, .copy { top: 0; transform: none; }
+  .beat .line { font-size: 1.45rem; }
+  .copy h1 { font-size: 2.1rem; }
+  .copy .tag { font-size: 1.15rem; margin: .4rem 0 .2rem; }
+  .copy .soon { font-size: .95rem; margin-bottom: .9rem; }
+  .copy .buy { justify-content: center; }
+  .vol, .oxford .grid, .about .grid, .letters .grid { grid-template-columns: minmax(0, 1fr); }
+  .vol img { max-width: 12rem; }
+  .about figure { max-width: 15rem; }
+}
+</style>
+</head>
+<body>
+<p class="made">A homepage idea made by Sparsh Saini for J. C. O’Neill. Not her official site.</p>
+<div class="ribbon">
+  <button type="button" aria-expanded="false" aria-controls="contents">Contents</button>
+  <nav id="contents" aria-label="Contents" hidden>
+    <a href="#books">The trilogy</a>
+    <a href="#oxford">Oxford</a>
+    <a href="#about">About Jane</a>
+    <a href="#letters">Northern Gothic</a>
+  </nav>
+</div>
+
+<main>
+<section class="hero" aria-label="The Blood Red Trilogy">
+  <div class="stage">
+    <div class="book">
+      <img class="plate" src="img/heart-plate.jpg" alt="" width="1200" height="1875" fetchpriority="high">
+      <div class="grow"><img src="img/heart-tree.webp" alt="" width="900" height="1140"></div>
+      <img class="mind" src="img/mind.jpg" alt="" width="1200" height="1875">
+      <img class="soul" src="img/soul.jpg" alt="" width="1200" height="1875">
+    </div>
+    <div class="words">
+      <div class="beat b1"><p class="which">Book one: A Blood Red Heart</p><p class="line">For some women, the greatest act of resistance is survival.</p></div>
+      <div class="beat b2" aria-hidden="true"><p class="which">Book two: A Blood Red Mind</p><p class="line">Two families, one feud: a thousand years of blood.</p></div>
+      <div class="beat b3" aria-hidden="true"><p class="which">Book three: A Blood Red Soul</p><p class="line">Sometimes it is not the nature of the sacrifice that matters, but the purity of the heart that makes it.</p></div>
+      <div class="copy">
+        <h1>The Blood Red Trilogy</h1>
+        <p class="tag">Modern Northern Gothic. Love, loss, lore.</p>
+        <p class="soon">A Blood Red Soul is out on 31 October</p>
+        <div class="buy">
+          <a class="btn" href="https://www.amazon.co.uk/dp/B0GT626SNG">Start with book one</a>
+          <a class="quiet" href="#books">See all three</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band books" id="books">
+  <div class="wrap">
+    <h2>Two families, divided by the Pennines</h2>
+    <p class="lead-in">Modern, Gothic romantic fantasy, woven with Northern mythology, complex female characters, and the question of how we learn to live with the ghosts of our past.</p>
+
+    <article class="vol">
+      <img src="img/heart-s.jpg" alt="A Blood Red Heart cover: a red heart-shaped tree on black inside a gilt frame of roses" width="480" height="750" loading="lazy">
+      <div>
+        <p class="no">Book one</p>
+        <h3>A Blood Red Heart</h3>
+        <p class="cry">For some women, the greatest act of resistance is survival.</p>
+        <p>Legend tells that every five hundred years, west of the Pennine Mountains, the Beloved is born: a woman chosen to bring balance to the secret world that exists alongside our own. The Beloved has now come again, but this time she has been born on the wrong side of the mountains.</p>
+        <p>Lonely, exhausted and carrying a dark secret, Dr Charlie Hart can’t remember her past, but it refuses to forget her. Chance brings Charlie to Rowans Holt, an ancient house owned by brilliant recluse Sally Marshall, where she finds unexpected friendship and sanctuary. But when the manipulative Marcus Rosendale threatens to destroy everything, Charlie’s secret awakens.</p>
+        <div class="buy">
+          <a class="btn" href="https://www.amazon.co.uk/dp/B0GT626SNG">Kindle</a>
+          <a class="quiet" href="https://www.amazon.co.uk/dp/1068709421">Paperback</a>
+          <a class="quiet" href="https://jconeillauthor.com/free-stuff">Free chapters</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="vol mind-v">
+      <img src="img/mind-s.jpg" alt="A Blood Red Mind cover: a gold heart-shaped tree on violet inside a gilt frame" width="480" height="750" loading="lazy">
+      <div>
+        <p class="no">Book two</p>
+        <h3>A Blood Red Mind</h3>
+        <p class="cry">Two families, one feud: a thousand years of blood.</p>
+        <p>Beautiful but isolated Laura Beaulouf is drawn tighter into the web woven by the cunning Marcus Rosendale. Does Marcus seek redemption or revenge? Meanwhile, Mac has a plan to save the Beaulouf fortunes, even if this involves breaking the heart of the woman he truly loves.</p>
+        <p>Charlie Hart knows that something was placed inside her head when she was eleven years old, but she will die if she tries to discover what it is.</p>
+        <div class="buy">
+          <a class="btn" href="https://www.amazon.co.uk/dp/B0GYQR9B3Y">Kindle</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="vol soul-v">
+      <img src="img/soul-s.jpg" alt="A Blood Red Soul cover: a black heart-shaped tree on red inside a gilt frame" width="480" height="750" loading="lazy">
+      <div>
+        <p class="no">Book three</p>
+        <h3>A Blood Red Soul</h3>
+        <p class="cry">Sometimes it is not the nature of the sacrifice that matters, but the purity of the heart that makes it.</p>
+        <p>Charlie Hart comes into her birthright of blood, and the long-predicted storm begins. Can Mac break the curse of a thousand years by completing the Beaulouf penance? And will anyone stop Marcus Rosendale in his relentless pursuit of money, power and death?</p>
+        <p>For some women, the greatest act of resistance is survival… for others it is all-out war.</p>
+        <p class="when">Out on 31 October 2026</p>
+        <div class="buy">
+          <a class="btn" href="https://www.amazon.co.uk/dp/B0GYYLWD56">Kindle</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="band oxford" id="oxford">
+  <div class="wrap grid">
+    <div>
+      <h2>Come and find me in Oxford</h2>
+      <p class="lead-in">I’ll have the whole trilogy with me at the Oxford Indie Book Fair.</p>
+    </div>
+    <div>
+      <p class="table"><small>My table</small>N05</p>
+      <dl>
+        <dt>When</dt><dd>Sunday 22 November 2026, 11am to 4.30pm</dd>
+        <dt>Where</dt><dd>Oxford Examination Schools, OX1 4BG</dd>
+        <dt>Entry</dt><dd>Free</dd>
+      </dl>
+      <a class="btn line" href="https://www.oxfordindiebookfair.co.uk/">About the fair</a>
+    </div>
+  </div>
+</section>
+
+<section class="band about" id="about">
+  <div class="wrap grid">
+    <figure>
+      <img src="img/allotment.jpg" alt="Jane at the door of her allotment shed with her black dog" width="600" height="800" loading="lazy">
+      <figcaption>On the allotment, with McVitie’s and a very old dog.</figcaption>
+    </figure>
+    <div>
+      <h2>Jane Croft, writing as J. C. O’Neill</h2>
+      <p>I live, work and write in Sheffield, but I was born in Cumbria, so I’m a true Northerner. I have degrees in law and medicine, and worked in the National Health Service for thirty-two years.</p>
+      <p>I began writing to amuse a much-loved relative after their cancer diagnosis. A few chapters turned into two series of books. I didn’t mean to write a modern Gothic fantasy trilogy; it wrote me.</p>
+      <p>Three kids, one dog, a Mr O’Neill, and a fondness for McVitie’s Chocolate Digestives.</p>
+      <p class="also">I also write the Lady Emmeline Regency adventures as J. C. Richmond, and the songs for The Junos, a country musical in development in Sheffield.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band letters" id="letters">
+  <div class="wrap grid">
+    <div>
+      <h2>Northern Gothic</h2>
+      <p class="lead-in">A letter every month or so: a lighthearted look at a Northern Gothic building, a review of a tea shop or hostelry, and a catch-up on what I’m writing.</p>
+      <p class="post">Latest: The Furness Peninsula, a tale of two mirrors and one vampire.</p>
+      <div class="buy">
+        <a class="btn" href="https://jconeillauthor.com/blog-2-1">Read the latest</a>
+        <a class="quiet" href="https://jconeillauthor.com/free-stuff">Get free chapters</a>
+      </div>
+    </div>
+    <figure>
+      <img src="img/chapel.jpg" alt="Samuel Worth Chapel in Sheffield, a stone chapel among overgrown trees" width="480" height="480" loading="lazy">
+      <figcaption>Samuel Worth Chapel, Sheffield.</figcaption>
+    </figure>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>A mockup made by Sparsh Saini for J. C. O’Neill. Not affiliated, not live. The covers, photos and words are the author’s.</p>
+    <p><a class="quiet" href="#">Back to top</a></p>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const root = document.documentElement;
+  const rb = document.querySelector('.ribbon button'), rn = document.getElementById('contents');
+  rb.addEventListener('click', () => { const open = rn.hidden; rn.hidden = !open; rb.setAttribute('aria-expanded', String(open)); });
+  rn.addEventListener('click', e => { if (e.target.closest('a')) { rn.hidden = true; rb.setAttribute('aria-expanded', 'false'); } });
+
+  const hero = document.querySelector('.hero'), book = hero.querySelector('.book');
+  const plate = book.querySelector('.plate'), grow = book.querySelector('.grow'), tree = grow.querySelector('img');
+  const mind = book.querySelector('.mind'), soul = book.querySelector('.soul');
+  const [b1, b2, b3] = hero.querySelectorAll('.beat'), copy = hero.querySelector('.copy');
+  const clamp = v => Math.min(1, Math.max(0, v));
+  const ease = t => t * t * (3 - 2 * t);
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const show = (el, o, y) => { el.style.opacity = o.toFixed(3); el.style.transform = `translateY(calc(${el.dataset.base || '0px'} + ${y.toFixed(2)}rem))`; };
+  const render = p => {
+    // 1. the heart-tree grows up out of its roots: the window rises while the tree inside holds still
+    const g = ease(clamp((p - .04) / .3));
+    grow.style.transform = `translateY(${((1 - g) * 100).toFixed(2)}%)`;
+    tree.style.transform = `translateY(${(-(1 - g) * 100).toFixed(2)}%) scale(${(1.06 - .06 * g).toFixed(4)})`;
+    // the gilt and the title come up with it
+    plate.style.opacity = (.28 + .72 * ease(clamp((p - .16) / .2))).toFixed(3);
+    book.style.transform = `scale(${(.96 + .04 * g).toFixed(4)})`;
+    // 2. the book turns to Mind, then to Soul
+    const m = ease(clamp((p - .42) / .1)), s = ease(clamp((p - .64) / .1));
+    mind.style.opacity = m.toFixed(3);
+    soul.style.opacity = s.toFixed(3);
+    show(b1, 1 - m, -m * 1.5);
+    show(b2, m * (1 - s), (1 - m) * 1.5 - s * 1.5);
+    show(b3, s * (1 - ease(clamp((p - .82) / .06))), (1 - s) * 1.5);
+    const c = ease(clamp((p - .86) / .1));
+    show(copy, c, (1 - c) * 1.4);
+  };
+  const setBase = () => {
+    const phone = innerWidth <= 760;
+    [b1, b2, b3, copy].forEach(el => el.dataset.base = phone ? '0px' : '-50%');
+  };
+  setBase();
+  if (reduced) {
+    root.classList.add('still');
+    render(1);
+    addEventListener('resize', () => { setBase(); render(1); });
+    return;
+  }
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const r = hero.getBoundingClientRect(), run = hero.offsetHeight - innerHeight;
+    render(run > 0 ? clamp(-r.top / run) : 1);
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  addEventListener('resize', () => { setBase(); update(); });
+  update();
+})();
+</script>
+</body>
+</html>
